@@ -125,17 +125,16 @@ header .purple-spot {
 header .purple-ball {
   position: absolute;
   top: 0;
-  left: 45%;
+  left: 60%;
   width: 60px;
   height: 60px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  z-index: 1;
 }
 header .red-ball {
   position: absolute;
-  top: 7.5%;
-  left: 26.5%;
+  top: 7.7%;
+  left: 35.1%;
 }
 
 main {
@@ -160,7 +159,7 @@ main .slogan h3 {
 main .crimson-spot {
   position: absolute;
   top: 28%;
-  left: -202px;
+  left: -182px;
   width: 311px;
   height: 311px;
   -ms-flex-negative: 0;
@@ -256,8 +255,8 @@ main .content .btn:hover {
 }
 main .small-red {
   position: absolute;
-  top: 85%;
-  left: -15.5%;
+  top: 58%;
+  left: 58%;
 }
 
 footer {
@@ -274,7 +273,7 @@ footer h3 {
   text-transform: uppercase;
   color: #656566;
 }
-footer .about-company, footer .menu-1, footer .menu-2 {
+footer .about-company {
   font-size: 16px;
   font-weight: 400;
   display: -webkit-box;
@@ -331,6 +330,9 @@ footer .footer-menu .menu {
 footer .footer-menu .menu li:nth-child(n+6) {
   padding-left: 40px;
 }
+footer .footer-menu .menu .small {
+  display: none;
+}
 footer .contact-info-footer {
   position: relative;
   margin-left: 23.3%;
@@ -382,7 +384,7 @@ footer p {
   }
   header .header-menu ul {
     gap: 16px;
-    margin: 20px 0 0 16px;
+    margin: 19px 0 0 19px;
   }
   header .header-menu ul li:nth-child(5) {
     display: none;
@@ -398,6 +400,15 @@ footer p {
   header .red-ball {
     display: none;
   }
+  header .purple-spot {
+    top: 20%;
+  }
+  header .purple-ball {
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    left: 85%;
+  }
   main {
     margin: 0;
     background: radial-gradient(304.35% 148.2% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%);
@@ -405,28 +416,30 @@ footer p {
             backdrop-filter: blur(7.5px);
   }
   main .slogan {
-    z-index: 1;
+    margin-left: 15px;
     position: relative;
-    top: 2.4em;
+    top: 2em;
   }
   main .slogan h1 {
     font-size: 36px;
     font-weight: 400;
+    margin-bottom: 0;
   }
   main .slogan h3 {
     font-family: var(--sub-font);
     font-size: 18px;
     font-weight: 400;
+    margin-top: 16px;
   }
   main .content {
     top: 0;
-    margin-top: 45px;
-    margin-left: 0;
+    margin-top: 3.5em;
+    margin-left: 15px;
+    font-size: 18px;
   }
   main .content h2 {
     font-family: var(--main-font);
     text-align: left;
-    font-size: 18px;
     font-weight: 500;
   }
   main .content h2 span {
@@ -435,8 +448,7 @@ footer p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    letter-spacing: 0.9px;
-    text-transform: uppercase;
+    text-transform: none;
   }
   main .content ul {
     -webkit-box-orient: horizontal;
@@ -444,11 +456,14 @@ footer p {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-top: 27px;
-    margin-left: 16px;
+    margin-top: 9px;
+    margin-left: 3px;
   }
   main .content ul .small {
     font-size: 13px;
@@ -486,16 +501,23 @@ footer p {
   }
   main .small-red {
     position: absolute;
-    top: 85%;
-    left: -15.5%;
+    top: 97%;
+    left: 5.5%;
+    width: 45px;
+    height: 46px;
   }
   footer {
     top: auto;
-    width: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  footer .about {
+    margin-top: 5.4em;
+  }
+  footer .about .about-company {
+    margin-top: 1em;
   }
   footer h3 {
     font-size: 12px;
@@ -506,10 +528,47 @@ footer p {
   }
   footer .footer-menu {
     left: 0;
-    width: 271px;
-    height: 142px;
+    top: 0.8em;
+  }
+  footer .footer-menu .menu {
+    margin-bottom: 0;
+    height: 174px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .footer-menu .menu li {
+    max-width: 123px;
+  }
+  footer .footer-menu .menu li:nth-child(n+6) {
+    padding-left: 0;
+  }
+  footer .footer-menu .menu .large {
+    display: none;
+  }
+  footer .footer-menu .menu .small {
+    display: block;
   }
   footer ul {
     font-size: 14px;
+  }
+  footer .contact-info-footer {
+    margin-top: 1em;
+    margin-left: 16px;
+    text-align: left;
+  }
+  footer .contact-info-footer span {
+    left: 0;
+    margin-top: 1em;
+  }
+  footer .contact-info-footer .contact-icon {
+    left: 0;
+  }
+  footer .contact-info-footer h4 {
+    margin-top: 0.5em;
+    font-size: 14px;
+  }
+  footer .contact-info-footer p {
+    margin-top: 4.5em;
   }
 }
