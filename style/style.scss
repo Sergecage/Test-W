@@ -105,11 +105,23 @@ header{
         width: 60px;
         height: 60px;
         flex-shrink: 0;
+        animation-name: purple-move;
+        animation-duration: 5s;
+        @keyframes purple-move{
+            from {top: 65%; left: 40%;}
+            to {top: 0; left: 60%;}
+        }
     }
     .red-ball{
         position: absolute;
         top: 7.7%;
         left: 35.1%;
+        animation-name: move;
+        animation-duration: 5s;
+        @keyframes move {
+            from { top: 50%;}
+            to {top: 7.7%;}
+        }
     }
 }
 
@@ -217,6 +229,12 @@ main{
         position: absolute;
         top: 58%;
         left: 58%;
+        animation-name: move-small;
+        animation-duration: 5s;
+        @keyframes move-small {
+            from {left: 38%;}
+            to {left: 58%;}
+        }
     }
 }
 

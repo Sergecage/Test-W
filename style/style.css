@@ -130,11 +130,55 @@ header .purple-ball {
   height: 60px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-animation-name: purple-move;
+          animation-name: purple-move;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+@-webkit-keyframes purple-move {
+  from {
+    top: 65%;
+    left: 40%;
+  }
+  to {
+    top: 0;
+    left: 60%;
+  }
+}
+@keyframes purple-move {
+  from {
+    top: 65%;
+    left: 40%;
+  }
+  to {
+    top: 0;
+    left: 60%;
+  }
 }
 header .red-ball {
   position: absolute;
   top: 7.7%;
   left: 35.1%;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+@-webkit-keyframes move {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 7.7%;
+  }
+}
+@keyframes move {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 7.7%;
+  }
 }
 
 main {
@@ -257,6 +301,26 @@ main .small-red {
   position: absolute;
   top: 58%;
   left: 58%;
+  -webkit-animation-name: move-small;
+          animation-name: move-small;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+@-webkit-keyframes move-small {
+  from {
+    left: 38%;
+  }
+  to {
+    left: 58%;
+  }
+}
+@keyframes move-small {
+  from {
+    left: 38%;
+  }
+  to {
+    left: 58%;
+  }
 }
 
 footer {
