@@ -1,0 +1,512 @@
+*{
+    box-sizing: border-box;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+    padding: 0;
+}
+
+:root{
+    --main-font: 'Inter', sans-serif;
+    --sub-font: "Montserrat", sans-serif;
+    --font-gradient: linear-gradient (#FCB045, #FF3F78);
+    --background-main: #0E1014;
+    --font-light: #E4E5EA;
+}
+
+body{
+    background-color: var(--background-main);
+    color: var(--font-light);
+}
+.container{
+    margin: 46px 150px 0 143px;
+}
+a{
+    color: var(--font-light);
+    font-family: var(--main-font);
+    &:hover{
+        color: #FCB045;
+        opacity: 0.5;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+.contact-icon{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 0;
+    margin-left: 38px;
+    left: 10px;
+}
+
+header{
+    display: flex;
+    .logo{
+        position: relative;
+        margin-top: 11px;
+        a{
+            margin-top: 11px;
+        }
+        span{
+            position: absolute;
+            left: 0;
+            top: 2rem;
+            font-family: var(--sub-font);
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+    .header-menu{
+        display: flex;
+        ul{
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            margin-top: 15px;
+            margin-left: 53px;
+        }
+    }
+    .contact-info{
+        display: flex;
+        margin-top: 15px;
+        margin-left: 145px;
+        span{
+            text-align: right;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: var(--main-font);
+        }
+    }
+    .purple-spot{
+        position: absolute;
+        top: -10%;
+        left: 42%;
+        width: 259px;
+        height: 259px;
+        flex-shrink: 0;
+        border-radius: 259px;
+        opacity: 0.5;
+        background: #833AB4;
+        filter: blur(196px);
+    }
+    .purple-ball{
+        position: absolute;
+        top: 0;
+        left: 60%;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        animation-name: purple-move;
+        animation-duration: 5s;
+        @keyframes purple-move{
+            from {top: 65%; left: 40%;}
+            to {top: 0; left: 60%;}
+        }
+    }
+    .red-ball{
+        position: absolute;
+        top: 7.7%;
+        left: 35.1%;
+        animation-name: move;
+        animation-duration: 5s;
+        @keyframes move {
+            from { top: 50%;}
+            to {top: 7.7%;}
+        }
+    }
+}
+
+main{
+    margin-top: 106px;
+    .slogan{
+        h1{
+            font-family: var(--main-font);
+            font-size: 48px;
+            font-weight: 400;
+            span{
+                background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+            }
+        }
+        h3{
+            font-family: var(--sub-font);
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+    .crimson-spot{
+        position: absolute;
+        top: 28%;
+        left: -182px;
+        width: 311px;
+        height: 311px;
+        flex-shrink: 0;
+        border-radius: 311px;
+        opacity: 0.5;
+        background: #961A1A;
+        filter: blur(196px);
+    }
+    .content{
+        position: relative;
+        top: -266px;
+        margin-left:808px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 330px;
+        align-items: flex-end;
+        h2{
+            font-family: var(--main-font);
+            text-align: right;
+            font-size: 18px;
+            font-weight: 500;
+            span{
+                background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;
+            }
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: flex-end;
+            margin-top: 27px;
+            .large, .small{
+                text-align: right;
+                font-family: var(--main-font);
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;                
+                span{
+                    font-family: var(--sub-font);
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    margin-top: 2px;
+                }
+            }
+            .small{
+                display: none;
+            }
+        }
+        .btn{
+            width: 262px;
+            height: 61px;
+            flex-shrink: 0;
+            background: #4077F3;
+            color: var(--font-light);
+            text-align: center;
+            font-family: var(--main-font);
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 52px;
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+                color: #0E1014;
+            }
+        }
+    }
+    .small-red{
+        position: absolute;
+        top: 58%;
+        left: 58%;
+        animation-name: move-small;
+        animation-duration: 5s;
+        @keyframes move-small {
+            from {left: 38%;}
+            to {left: 58%;}
+        }
+    }
+}
+
+footer{
+    position: relative;
+    display: flex;
+    top: -9.7em;
+    h3{
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #656566;
+    }
+    .about-company{
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        flex-basis: 50%;
+        position: relative;
+    }
+    .about, .contact-info{
+        font-family: var(--main-font);
+        display: flex;
+        flex-direction: column;
+    }
+    .about-company{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.2em;
+    }
+    .footer-menu{
+        position: relative;
+        left: 6em;
+        .menu{
+            height: 145px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            top: 2em;
+            left: -3em;
+            li{
+                &:nth-child( n + 6) {
+                    padding-left: 40px;
+                }
+            }
+            .small{
+                display: none;
+            }
+        }
+    }
+    .contact-info-footer{
+        position: relative;
+        margin-left: 23.3%;
+        text-align: right;
+        span{
+            position: absolute;
+            left: 8.5em;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: var(--main-font);
+            margin-top: 0.3em;
+        }
+        .contact-icon{
+            margin: 44px 0 0;
+            gap: 10px;
+            flex-direction: row;
+            flex-shrink: 0;
+        }
+    }
+    h4{
+        font-family: var(--main-font);
+        font-size: 16px;
+        font-weight: 400;
+    }
+    p{
+        font-family: var(--sub-font);
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 68px;
+    }
+}
+
+@media  screen and (max-width: 320px) {
+    body{
+        margin: 0;
+    }
+    .container{
+        margin: 0;
+    }
+    header{
+        flex-shrink: 0;
+        .logo{
+            display: none;
+        }
+        .header-menu{
+            ul{
+                gap: 16px;
+                margin: 19px 0 0 19px;
+                li{
+                    &:nth-child(5){
+                        display: none;
+                    }
+                    a{
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .contact-info{
+            display: none;
+        }
+        .red-ball{
+            display: none;
+        }
+        .purple-spot{
+            top: 20%;
+        }
+        .purple-ball{
+            width: 40px;
+            height: 40px;
+            top: 30%;
+            left: 85%;
+        }
+    }
+    main{
+        margin: 0;
+        background: radial-gradient(304.35% 148.2% at 3.2% 3.49%, rgba(255, 246, 233, 0.10) 0%, rgba(26, 29, 35, 0.10) 26.62%, rgba(26, 29, 35, 0.10) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0.00) 100%);
+        backdrop-filter: blur(7.5px);
+        .slogan{
+            margin-left: 15px;
+            position: relative;
+            top: 2em;
+            h1{
+                font-size: 36px;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+            h3{
+                font-family: var(--sub-font);
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 16px;
+            }
+        }
+        .content{
+            top: 0;
+            margin-top: 3.5em;
+            margin-left:15px;
+            font-size: 18px;
+            h2{
+                font-family: var(--main-font);
+                text-align: left;
+                font-weight: 500;
+                span{
+                    background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 700;
+                    
+                    text-transform: none;
+                }
+            }
+            ul{
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 9px;
+                margin-left: 3px;
+                .small{
+                    font-size: 13px;
+                    font-weight: 400;
+                    letter-spacing: 0.9px;
+                    text-transform: uppercase; 
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;               
+                    span{
+                        display: none;
+                    }
+                    &::before{
+                        content: "";
+                        margin-top: 0.5em;
+                        width: 10px;
+                        height: 1px;
+                        background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+                    }
+                    br{
+                        display: none;
+                    }
+                }
+                .large{
+                    display: none;
+                }
+            }
+            .btn{
+               display: none;
+            }
+        }
+        .small-red{
+            position: absolute;
+            top: 97%;
+            left: 5.5%;
+            width: 45px;
+            height: 46px;
+        }
+    }
+    footer{
+        top: auto;
+        flex-direction: column;
+        .about{
+            margin-top: 5.4em;
+            .about-company{
+                margin-top: 1em;
+            }
+        }
+        h3{
+            font-size: 12px;
+            margin: 0;
+        }
+        div{
+            margin-left: 16px;
+        }
+        .footer-menu{
+            left: 0;
+            top: 0.8em;
+            .menu{
+                margin-bottom: 0;
+                height: 174px;
+                align-items: flex-start;
+                li{
+                    max-width: 123px;
+                    &:nth-child( n + 6) {
+                        padding-left: 0;
+                    }
+                }
+                .large{
+                    display: none;
+                }
+                .small{
+                    display: block;
+                }
+            }
+        }
+        ul{
+            font-size: 14px;
+        }
+        .contact-info-footer{
+            margin-top: 1em;
+            margin-left: 16px;
+            text-align: left;
+            span{
+                left: 0;
+                margin-top: 1em;
+            }
+            .contact-icon{
+                left: 0;
+            }
+            h4{
+                margin-top: 0.5em;
+                font-size: 14px;
+            }
+            p{
+                margin-top: 4.5em;
+            }
+        }
+    }
+}
